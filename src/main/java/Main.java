@@ -29,6 +29,12 @@ public class Main {
         Transaction transaction = session.beginTransaction();
 
 
+        /*Course course = session.get(Course.class, 45);
+        int countStudents = course.getStudents().size();
+        System.out.println("Course: " + course +
+                "\nCount students: " + countStudents);*/
+
+
         CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
         CriteriaQuery<Subscription> criteriaQuery = criteriaBuilder.createQuery(Subscription.class);
         Root<Subscription> root = criteriaQuery.from(Subscription.class);
