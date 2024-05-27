@@ -9,8 +9,6 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
@@ -27,12 +25,6 @@ public class Main {
 
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-
-
-        /*Course course = session.get(Course.class, 45);
-        int countStudents = course.getStudents().size();
-        System.out.println("Course: " + course +
-                "\nCount students: " + countStudents);*/
 
 
         CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
