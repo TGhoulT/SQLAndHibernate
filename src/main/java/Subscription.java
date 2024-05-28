@@ -1,13 +1,11 @@
 import jakarta.persistence.*;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "subscriptions")
 public class Subscription {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "student_id")
     private int studentId;
     @Column(name = "course_id")
