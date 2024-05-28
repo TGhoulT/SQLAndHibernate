@@ -13,12 +13,7 @@ public class NewMain {
                 .buildSessionFactory();
 
         try (Session session = sessionFactory.openSession()) {
-            /*String hql = "SELECT s.courseId, COUNT(*) AS totalSubscriptions, AVG(DATEDIFF(CURDATE(), s.subscriptionDate)) AS avgDaysSinceSubscription " +
-                    "FROM Subscription s " +
-                    "GROUP BY s.courseId " +
-                    "ORDER BY totalSubscriptions DESC";*/
-
-            String hql = "SELECT s.courseId, COUNT(*) AS totalSubscriptions\n" +
+            String hql = "SELECT s.courseId, COUNT(*)\n" +
                     "FROM Subscription s\n" +
                     "GROUP BY s.courseId\n" ;
 
